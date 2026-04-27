@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\DashboardController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('tasks', TaskController::class);
+    // (Tu pourras ajouter la ressource categories plus tard)
+});
 
 Route::get('/', function () {
     return view('welcome');
