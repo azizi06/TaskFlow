@@ -28,3 +28,11 @@ Route::get('/', function () {
 Route::get('/propos', function () {
     return view('propos');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/dashboard2', function () {
+    return view('dashboard');
+});
