@@ -23,7 +23,7 @@ class DashboardController extends Controller
             ->count();
 
         // progression globale en pourcentage
-        $total    = $user->tasks()->count();
+        $total     = $user->tasks()->count();
         $terminees = $user->tasks()->where('status', 'terminee')->count();
         $progression = $total > 0 ? round(($terminees / $total) * 100) : 0;
 
