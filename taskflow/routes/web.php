@@ -28,3 +28,6 @@ Route::get('/', function () {
 Route::get('/propos', function () {
     return view('propos');
 });
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
