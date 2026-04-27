@@ -23,6 +23,11 @@ Route::get('/a-propos', function () {
 Route::get('/contact', [ContactController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'store']);
 
+// login (si pas Breeze)
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
 
 // Partie privée (authentifiée)
 Route::middleware(['auth'])->group(function () {
