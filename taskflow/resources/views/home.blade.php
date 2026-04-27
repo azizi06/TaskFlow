@@ -130,10 +130,10 @@
         <h2 class="text-center mb-5">Équipe</h2>
 
         <div class="row g-4">
-                @include('layouts.card',['title'=>'azizi mohammed','text'=> 'uha'])
-                @include('layouts.card',['title'=>'mokrane yasmine','text'=>'uha'])
-                @include('layouts.card',['title'=>'lilia kernou','text'=>'uha'])
-                @include('layouts.card',['title'=>'merieme louizini','text'=>'uha'])
+                @include('layouts.card',['title'=>'azizi mohammed','text'=> 'uha licence 3 informatique'])
+                @include('layouts.card',['title'=>'mokrane yasmine','text'=>'uha licence 3 informatique'])
+                @include('layouts.card',['title'=>'lilia kernou','text'=>'uha licence 3 informatique'])
+                @include('layouts.card',['title'=>'merieme louizini','text'=>'uha licence 3 informatique'])
             <div class="col-md-4">
                 <div class="card text-center shadow-sm">
                     <div class="card-body">
