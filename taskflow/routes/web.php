@@ -22,5 +22,9 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/propos', function () {
+    return view('propos');
 });

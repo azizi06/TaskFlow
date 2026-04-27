@@ -8,10 +8,31 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
+
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 class Task extends Model
 {
-    protected $fillable = ['title', 'description', 'due_date', 'priority', 'status', 'category_id'];
+    use HasFactory;
 
-    public function user() { return $this->belongsTo(User::class); }
-    public function category() { return $this->belongsTo(Category::class); }
+    protected $fillable = [
+        'title',
+        'description',
+        'due_date',
+        'priority',
+        'status',
+        'user_id',
+        'category_id',
+    ];
+
+    // Une tâche appartient à un utilisateur
+    public function user(): BelongsTo {
+        return $this->belongsTo(User::class);
+    }
+
+    // Une tâche appartient à une catégorie
+    public function category(): BelongsTo {
+        return $this->belongsTo(Category::class);
+    }
+
 }
