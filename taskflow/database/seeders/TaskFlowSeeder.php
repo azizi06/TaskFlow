@@ -12,11 +12,13 @@ class TaskFlowSeeder extends Seeder
 {
     public function run(): void {
         // créer un utilisateur de test
-        $user = User::create([
-            'name'     => 'Test User',
-            'email'    => 'test@taskflow.com',
-            'password' => Hash::make('password'),
-        ]);
+       $user = User::firstOrCreate(
+    ['email' => 'test@taskflow.com'],
+    [
+        'name'     => 'Test User',
+        'password' => Hash::make('password'),
+    ]
+);
 
         // créer des catégories pour cet utilisateur
         $categories = Category::factory()
