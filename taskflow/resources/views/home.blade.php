@@ -108,7 +108,7 @@
                     </div>
                 </div>
             </div>
-
+            @y
             <div class="col-md-4">
                 <div class="card border-0 shadow">
                     <div class="card-body">
@@ -116,6 +116,8 @@
                         <p>Travaillez en équipe efficacement.</p>
                     </div>
                 </div>
+
+                
             </div>
 
         </div>
@@ -128,7 +130,10 @@
         <h2 class="text-center mb-5">Équipe</h2>
 
         <div class="row g-4">
-
+                @include('layouts.card',['title'=>'azizi mohammed','text'=> 'uha'])
+                @include('layouts.card',['title'=>'mokrane yasmine','text'=>'uha'])
+                @include('layouts.card',['title'=>'lilia kernou','text'=>'uha'])
+                @include('layouts.card',['title'=>'merieme louizini','text'=>'uha'])
             <div class="col-md-4">
                 <div class="card text-center shadow-sm">
                     <div class="card-body">
