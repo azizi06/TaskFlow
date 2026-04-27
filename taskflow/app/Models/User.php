@@ -27,6 +27,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
     // Un utilisateur a plusieurs tâches
     public function tasks(): HasMany {
         return $this->hasMany(Task::class);
@@ -37,3 +38,4 @@ class User extends Authenticatable
         return $this->hasMany(Category::class);
     }
 }
+
